@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @NoArgsConstructor
 @Document("accounts")
 public class Accounts {
-    public static final String name="accounts_sequence";
+    public static final String name="account_sequence";
     @Id
     private Long account_id;
     private int customer_id;

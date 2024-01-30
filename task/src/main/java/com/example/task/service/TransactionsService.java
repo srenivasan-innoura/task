@@ -26,8 +26,6 @@ public class TransactionsService {
     public void createTransaction(Transactions transactions){
         transactions.setTransaction_id(generateSequence(Transactions.name));
         transactionsRepository.save(transactions);
-//        Accounts accounts = new Accounts();
-//        accounts.setBalance(updateBalance(transactions.getTransaction_id()));
     }
     public Long generateSequence(String seqName) {
         TransactionSequence counter = transactionSequenceRepository.findById(seqName).orElse(new TransactionSequence());
@@ -64,7 +62,6 @@ public class TransactionsService {
 
     public String doTransactions(TransactionRequest request)
     {
-
         Accounts accounts= accountsRepository.findById(request.getId()).get();
         if(request.getType().equals("DEBIT") && accounts.getBalance()>request.getAmount() )
         {

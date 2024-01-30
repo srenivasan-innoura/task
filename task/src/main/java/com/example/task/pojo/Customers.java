@@ -14,7 +14,7 @@ public class Customers {
         return name;
     }
 
-    public static final String name="customer_sequence";
+    public static final String name="customers_sequence";
 
     public void setCustomer_id(Long customer_id) {
         this.customer_id = customer_id;

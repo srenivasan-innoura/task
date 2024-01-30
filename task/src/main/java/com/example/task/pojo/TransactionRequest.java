@@ -10,7 +10,6 @@ import org.springframework.data.annotation.Id;
 @Setter
 @Data
 public class TransactionRequest {
-
     private Long id;
     private String type;
     private double amount;

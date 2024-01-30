@@ -15,7 +15,6 @@ public class AccountsController {
     AccountsService accountsService;
     @Autowired
     CustomerRepository customerRepository;
-
     @PostMapping("/accounts")
     public void createAccount(@RequestBody Accounts accounts){
         accountsService.createAccount(accounts);
@@ -33,7 +32,6 @@ public class AccountsController {
 
     @PutMapping("/accounts")
     public Accounts updateAccount( @RequestBody Accounts accounts){
-//        customers.setCustomer_id(customer_id);
         accountsService.updateAccounts(accounts);
         return accounts;
     }

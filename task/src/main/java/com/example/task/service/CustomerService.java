@@ -19,7 +19,6 @@ public class CustomerService {
         customers.setCustomer_id(generateSequence(Customers.name));
         customerRepository.save(customers);
     }
-
     public Long generateSequence(String seqName) {
         CustomerSequence counter = customerSequenceRepository.findById(seqName).orElse(new CustomerSequence());
         if (counter.getSeq() == null) {
@@ -40,7 +39,6 @@ public class CustomerService {
     public Customers retrieveCustomersById(int id){
         return customerRepository.findById((long) id).get();
     }
-
     public Customers updateCustomer(Customers customers){
         Customers existingCustomer = customerRepository.findById(customers.getCustomer_id()).get();
         existingCustomer.setFirst_name(customers.getFirst_name());

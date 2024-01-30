@@ -30,7 +30,6 @@ public class CustomerController {
 
     @PutMapping("/customers")
     public Customers updateCustomer( @RequestBody Customers customers){
-//        customers.setCustomer_id(customer_id);
         customerService.updateCustomer(customers);
         return customers;
     }
@@ -39,5 +38,4 @@ public class CustomerController {
     public void deleteCustomer(@PathVariable("customer_id") int customer_id){
         customerService.deleteCustomer(customer_id);
     }
-
 }

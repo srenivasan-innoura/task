@@ -42,7 +42,6 @@ public class TransactionsController {
     public void deleteTransaction(@PathVariable("transaction_id") int transaction_id){
         transactionsService.deleteTransactions(transaction_id);
     }
-
     @PostMapping("/dotransactions")
     public String doTransaction(@RequestBody TransactionRequest request){
        return transactionsService.doTransactions(request);
